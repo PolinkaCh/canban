@@ -1,0 +1,7 @@
+.main {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-around;
+    height:80%;
+  }
+  

@@ -1,0 +1,36 @@
+.fullCard {
+    width: 282px;
+    background-color: #EBECF0;
+    border-radius: 10px;
+    margin:10px;
+    box-sizing: border-box;
+    height: fit-content
+  }
+.fullCard_name {
+    font-size: 18px;
+    font-style: normal;
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 21px;
+    padding-left: 8px;
+  }
+.fullCard_add {
+    color: #5E6C84;;
+    border: none;
+    background-color: #EBECF0;
+    margin-bottom: 10px;
+    margin-left: 8px;
+  }
+.fullCard_add:hover {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5%;
+    
+  }
+.task_item {
+  background-color: white;
+  margin: 12px;
+  border-radius: 5%;
+  padding: 8px;
+}
+  

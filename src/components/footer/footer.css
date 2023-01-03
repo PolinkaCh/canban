@@ -1,0 +1,16 @@
+.footer_tasks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    background-color: #0067A3;
+    color: white;
+    padding: 5px;
+    height: 55px;
+  }
+  .tasks {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .task {
+    margin-right: 10px;
+  }

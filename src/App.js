@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer"
+import Main from "./components/main/main"
+import data from "./mock-data.json"
+import React from 'react';
+import {BrowserRouter} from 'react-router-dom';
 
-function App() {
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    tasks: data.tasks
+  }}
+  
+  
+  render (){
+    const addTask = (task)=> {
+      console.log (task)
+      this.setState (prevState=> ({
+        tasks:[
+          ...prevState.tasks, {
+            task
+          }
+
+        ]
+    }))
+    }
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Main tasks={this.state.tasks} addTask={addTask}  />
+      <Footer tasks={this.state.tasks} name = "Polina" year="2022"/>
     </div>
+    </BrowserRouter>
   );
 }
+}
 
-export default App;

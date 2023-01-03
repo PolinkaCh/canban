@@ -1,0 +1,46 @@
+{
+    "tasks":[
+        {
+            "title": "Backlog",
+            "id": 1,
+            "name": "Sprint bugfix",
+            "description": "Fix all the bugs"      
+        },
+        {
+            "title": "Backlog",
+            "id": 2,
+            "name": "Login page – performance issues",
+            "description": "Fix all the bugs"
+        },
+        {
+            "title": "Ready",
+            "id": 3,
+            "name": "Login page – performance issues",
+            "description": "Fix all the bugs"
+        },
+        {
+            "title": "Ready",
+            "id": 4,
+            "name": "Checkout bugfix",
+            "description": "Fix all the bugs"
+        },
+        {
+            "title": "In Progress",
+            "id": 5,
+            "name": "User page – performance issues",
+            "description": "Fix all the bugs"
+        },
+        {
+            "title": "Finished",
+            "id": 6,
+            "name": "Main page – performance issues",
+            "description": "Fix all the bugs"
+        },
+        {
+            "title": "Finished",
+            "id": 7,
+            "name": "Main page bugfix",
+            "description": "Fix all the bugs"
+        }
+    ]
+}

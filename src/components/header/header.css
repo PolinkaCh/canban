@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0067A3;
+    height: 55px;
+  }
+  .header_head {
+    font-size: 28px;
+    color: white;
+    margin-left: 10px;
+    line-height: 33px;
+  }
+  .header_avatar {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+  .header_avatar_arrow {
+    width: 10px;
+    height: 10px;
+    margin-top: 8px;
+  }
+  .header_avatar_block {
+    display: flex;
+    margin: 10px;
+  }
