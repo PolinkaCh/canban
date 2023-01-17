@@ -1,7 +1,19 @@
+.list {
+  background-color:#0079BF;
+  padding: 20px;
+  height: 73%;
+}
 .main {
-    background-color: lightblue;
     display: flex;
     justify-content: space-around;
-    height:80%;
+  }
+  @media screen and (max-width: 800px){
+    .main {
+      display: flex;
+      flex-direction: column; 
+    }
+    .list {
+      height: fit-content;
+    }
   }
   

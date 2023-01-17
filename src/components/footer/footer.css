@@ -14,3 +14,8 @@
   .task {
     margin-right: 10px;
   }
+  @media screen and (max-width: 800px){
+    .footer_tasks {
+      display: none;
+    }
+  }

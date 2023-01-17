@@ -1,29 +1,33 @@
 import React from "react"
-import Card from "./card/card"
+import Details from "./detailed_card/detailed_card"
 import "./main.css"
-import {LIST_TYPES, LIST_COPY} from "../../config.js"
+import {Route, Routes} from 'react-router-dom';
+import List from "./List/list"
 
 class Main extends React.Component {
-  
-  render(){
-    const addNewTask = (name)=> {
-      const newTask = {
-      title: LIST_TYPES.BACKLOG,
-      name: name
-    }
-    console.log (newTask)
-    if (newTask){
-    this.props.addTask(newTask)
-    }
+  constructor(props) {
+    super(props);
+    this.state = {openedTask: ""}
+    this.openNewTask = this.openNewTask.bind(this)
   }
+  
+openNewTask = (title, id, description) => {
+  const openedTask = { 
+    titleTask: title, 
+    idTask: id, 
+    descriptionTask: description,
+  }
+  this.setState ({
+    openedTask: openedTask
+  })    // Функция, открывающая задачу
+}
+  render(){
     return (
-      <div className="main">
-        {Object.values(LIST_TYPES).map(type =>{
-          const listTasks = this.props.tasks.filter(task => task.title === type)
-          return (
-            <Card key = {type} name ={LIST_COPY[type]} tasks ={listTasks || []} addNewTask={addNewTask}/>
-          )
-        })}
+      <div className="list">
+        <Routes> 
+            <Route path = "/task/:idTask" element = {<Details tasks={this.props.tasks} openedTask = {this.state.openedTask} addNewTask = {this.props.addNewTask}/>}/> :
+            <Route path = "/" element = {<List tasks={this.props.tasks} addTask = {this.props.addTask} addNewTask={this.props.addNewTask} openNewTask= {this.openNewTask} />}/>
+        </Routes>
       </div>
     )
   }

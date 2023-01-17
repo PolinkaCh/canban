@@ -6,7 +6,6 @@ class Footer extends React.Component {
     const {name, year}=this.props
     const backlogList = this.props.tasks.filter(task => task.title === "Backlog")
     const doneList = this.props.tasks.filter (task => task.title === "Finished")
-    if (!backlogList.length || !doneList.length) return null;
     return (
       <div className="footer_tasks">
         <div className="tasks">

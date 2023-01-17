@@ -7,21 +7,72 @@
   .header_head {
     font-size: 28px;
     color: white;
-    margin-left: 10px;
+    margin-left: 20px;
     line-height: 33px;
   }
   .header_avatar {
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    margin-right: 5px;
+    margin-right: 15px;
   }
   .header_avatar_arrow {
-    width: 10px;
-    height: 10px;
-    margin-top: 8px;
+    margin: 8px;
+    cursor: pointer;
+    position:relative;
+  }
+  .arrow_down svg {
+    position: relative;
+    top: 25%;
+    left: 25%
+  }
+  .menuSvg {
+    position: absolute;
+    margin-top: 42px;
+    margin-left: 13px ;
+
+  }
+  
+  .menu{
+    position: absolute;
+    width: 134px;
+    height: 60px;
+    background-color: white;
+    margin-top: 50px;
+    padding:0;
+    margin-left: -75px;
+    border-radius: 5%;
+  }
+ 
+  .menu_content {
+    list-style-type: none;
+    font-size: 14px;
+    height: 30px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 8px;
+  }
+  .menu_content:first-child{
+    padding-top: 3px;
+  }
+  .menu_content a{
+    text-decoration: none;
+    color: black;
+  }
+  .menu_content:hover {
+    background-color: #EBECF0;
+    border-radius: 5%;
+
   }
   .header_avatar_block {
     display: flex;
-    margin: 10px;
+    margin: 10px 20px;
+  }
+  @media screen and (max-width: 800px){
+    .header_head {
+      opacity:0;
+    }
+    .header {
+      background-color: #0079BF
+    }
   }
